@@ -1,0 +1,64 @@
+// src/views/scoreboard.ejs
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    
+    <main class="container">
+        <h1>Live Scoreboard</h1>
+        
+        <section class="live-matches">
+            <h2>Live Matches</h2>
+            <% if (liveMatches.length > 0) { %>
+                <% liveMatches.forEach(function(match) { %>
+                    <div class="match-card live">
+                        <div class="match-header">
+                            <span class="match-type"><%= match.matchType %></span>
+                            <span class="live-indicator">LIVE</span>
+                        </div>
+                        
+                        <div class="team team1">
+                            <img src="/images/teams/<%= match.teams.team1.name.toLowerCase() %>.png" 
+                                 alt="<%= match.teams.team1.name %>">
+                            <h3><%= match.teams.team1.name %></h3>
+                            <p class="score">
+                                <%= match.score.team1.runs %>/<%= match.score.team1.wickets %>
+                                (<%= match.score.team1.overs %> ov)
+                            </p>
+                        </div>
+                        
+                        <div class="team team2">
+                            <img src="/images/teams/<%= match.teams.team2.name.toLowerCase() %>.png" 
+                                 alt="<%= match.teams.team2.name %>">
+                            <h3><%= match.teams.team2.name %></h3>
+                            <p class="score">
+                                <%= match.score.team2.runs %>/<%= match.score.team2.wickets %>
+                                (<%= match.score.team2.overs %> ov)
+                            </p>
+                        </div>
+                        
+                        <a href="/matches/<%= match._id %>" class="btn view-details">View Details</a>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p>No live matches at the moment</p>
+            <% } %>
+        </section>
+
+        <section class="recent-matches">
+            <h2>Recent Matches</h2>
+            <!-- Similar structure to live matches -->
+        </section>
+
+        <section class="upcoming-matches">
+            <h2>Upcoming Matches</h2>
+            <!-- Similar structure to live matches -->
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

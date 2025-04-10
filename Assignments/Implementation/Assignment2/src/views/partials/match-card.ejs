@@ -1,0 +1,29 @@
+// src/views/partials/match-card.ejs
+<div class="match-details">
+    <div class="match-type"><%= match.matchType %></div>
+    <div class="match-teams">
+        <div class="team">
+            <img src="/images/teams/<%= match.teams.team1.name.toLowerCase() %>.png" 
+                 alt="<%= match.teams.team1.name %>">
+            <span class="team-name"><%= match.teams.team1.name %></span>
+            <span class="team-score">
+                <%= match.score.team1.runs %>/<%= match.score.team1.wickets %>
+                (<%= match.score.team1.overs %> ov)
+            </span>
+        </div>
+        <div class="vs">VS</div>
+        <div class="team">
+            <img src="/images/teams/<%= match.teams.team2.name.toLowerCase() %>.png" 
+                 alt="<%= match.teams.team2.name %>">
+            <span class="team-name"><%= match.teams.team2.name %></span>
+            <span class="team-score">
+                <%= match.score.team2.runs %>/<%= match.score.team2.wickets %>
+                (<%= match.score.team2.overs %> ov)
+            </span>
+        </div>
+    </div>
+    <div class="match-status <%= match.status.toLowerCase() %>">
+        <%= match.status %>
+    </div>
+    <a href="/matches/<%= match._id %>" class="btn view-details">View Details</a>
+</div>

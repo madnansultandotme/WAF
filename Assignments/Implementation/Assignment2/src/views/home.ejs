@@ -1,0 +1,83 @@
+// src/views/home.ejs
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    
+    <main class="container">
+        <section class="hero-section">
+            <h1>Welcome to Cricket Dashboard</h1>
+            <p>Your one-stop destination for live cricket scores, series updates, and player statistics</p>
+        </section>
+
+        <!-- Live Matches Section -->
+        <section class="live-matches-section">
+            <div class="section-header">
+                <h2>Live Matches</h2>
+                <a href="/scoreboard" class="view-all">View All</a>
+            </div>
+            <div class="matches-grid">
+                <% if (liveMatches.length > 0) { %>
+                    <% liveMatches.forEach(function(match) { %>
+                        <div class="match-card live">
+                            <%- include('partials/match-card', { match: match }) %>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p class="no-matches">No live matches at the moment</p>
+                <% } %>
+            </div>
+        </section>
+
+        <!-- Upcoming Series Section -->
+        <section class="upcoming-series-section">
+            <div class="section-header">
+                <h2>Upcoming Series</h2>
+                <a href="/series" class="view-all">View All</a>
+            </div>
+            <div class="series-grid">
+                <% upcomingSeries.forEach(function(series) { %>
+                    <div class="series-card">
+                        <%- include('partials/series-card', { series: series }) %>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+
+        <!-- Recent Results Section -->
+        <section class="recent-results-section">
+            <div class="section-header">
+                <h2>Recent Results</h2>
+                <a href="/scoreboard" class="view-all">View All</a>
+            </div>
+            <div class="results-list">
+                <% recentResults.forEach(function(match) { %>
+                    <div class="result-card">
+                        <%- include('partials/result-card', { match: match }) %>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+
+        <!-- Top Teams Section -->
+        <section class="top-teams-section">
+            <div class="section-header">
+                <h2>Top Teams</h2>
+                <a href="/teams" class="view-all">View All</a>
+            </div>
+            <div class="teams-grid">
+                <% topTeams.forEach(function(team) { %>
+                    <div class="team-card">
+                        <%- include('partials/team-card', { team: team }) %>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

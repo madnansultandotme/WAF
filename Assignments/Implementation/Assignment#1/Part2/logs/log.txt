@@ -1,0 +1,27 @@
+{"level":"info","message":"Weather notification system starting","timestamp":"2024-12-20T11:31:51.495Z"}
+{"level":"info","message":"Starting weather notification process","timestamp":"2024-12-20T11:31:51.500Z"}
+{"level":"info","message":"Fetching weather data from 7timer API","timestamp":"2024-12-20T11:31:51.501Z"}
+{"forecast":{"cloudcover":1,"lifted_index":10,"prec_amount":0,"prec_type":"none","rh2m":"10%","temp2m":16,"timepoint":3,"weather":"clearday","wind10m":{"direction":"W","speed":2}},"level":"info","message":"Successfully fetched weather data","timestamp":"2024-12-20T11:31:56.212Z"}
+{"level":"info","message":"Attempting to send email notification","timestamp":"2024-12-20T11:31:56.213Z"}
+{"level":"info","message":"Attempting to send SMS notification","timestamp":"2024-12-20T11:31:56.220Z"}
+{"level":"info","message":"SMS sent successfully","response":{"created_at":"2024-12-20T11:31:59.192156","request_id":"001ea353-1fe5-412d-8e66-d3a3fa8acffa","status":"accepted"},"timestamp":"2024-12-20T11:31:57.739Z"}
+{"level":"info","message":"Email sent successfully","messageId":"<9f27d0c9-707e-4b3e-2fec-9ccb6e5878d6@gmail.com>","timestamp":"2024-12-20T11:32:01.099Z"}
+{"level":"info","message":"Weather notifications sent successfully","timestamp":"2024-12-20T11:32:01.100Z"}
+{"level":"info","message":"Weather notification system starting","timestamp":"2024-12-20T11:33:05.841Z"}
+{"level":"info","message":"Starting weather notification process","timestamp":"2024-12-20T11:33:05.847Z"}
+{"level":"info","message":"Fetching weather data from 7timer API","timestamp":"2024-12-20T11:33:05.847Z"}
+{"forecast":{"cloudcover":1,"lifted_index":10,"prec_amount":0,"prec_type":"none","rh2m":"10%","temp2m":16,"timepoint":3,"weather":"clearday","wind10m":{"direction":"W","speed":2}},"level":"info","message":"Successfully fetched weather data","timestamp":"2024-12-20T11:33:06.462Z"}
+{"level":"info","message":"Attempting to send email notification","timestamp":"2024-12-20T11:33:06.463Z"}
+{"level":"info","message":"Attempting to send SMS notification","timestamp":"2024-12-20T11:33:06.471Z"}
+{"level":"info","message":"SMS sent successfully","response":{"created_at":"2024-12-20T11:33:10.027752","request_id":"001ff702-a4b6-4763-bd62-d4d220ba1581","status":"accepted"},"timestamp":"2024-12-20T11:33:08.454Z"}
+{"level":"info","message":"Email sent successfully","messageId":"<10db33c4-2bd0-275b-944f-8a8319c6e74f@gmail.com>","timestamp":"2024-12-20T11:33:11.944Z"}
+{"level":"info","message":"Weather notifications sent successfully","timestamp":"2024-12-20T11:33:11.945Z"}
+{"level":"info","message":"Weather notification system starting","timestamp":"2024-12-20T11:39:12.125Z"}
+{"level":"info","message":"Starting weather notification process","timestamp":"2024-12-20T11:39:12.130Z"}
+{"level":"info","message":"Fetching weather data from 7timer API","timestamp":"2024-12-20T11:39:12.131Z"}
+{"forecast":{"cloudcover":1,"lifted_index":10,"prec_amount":0,"prec_type":"none","rh2m":"10%","temp2m":16,"timepoint":3,"weather":"clearday","wind10m":{"direction":"W","speed":2}},"level":"info","message":"Successfully fetched weather data","timestamp":"2024-12-20T11:39:12.654Z"}
+{"level":"info","message":"Attempting to send email notification","timestamp":"2024-12-20T11:39:12.656Z"}
+{"level":"info","message":"Attempting to send SMS notification","timestamp":"2024-12-20T11:39:12.663Z"}
+{"level":"info","message":"SMS sent successfully","response":{"created_at":"2024-12-20T11:39:15.698922","request_id":"001959ea-d570-426e-aab0-32b911f4f789","status":"accepted"},"timestamp":"2024-12-20T11:39:14.125Z"}
+{"level":"info","message":"Email sent successfully","messageId":"<cec3af3b-b814-2c32-97de-43f0ce6aae10@gmail.com>","timestamp":"2024-12-20T11:39:22.694Z"}
+{"level":"info","message":"Weather notifications sent successfully","timestamp":"2024-12-20T11:39:22.698Z"}

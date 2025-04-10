@@ -1,0 +1,44 @@
+// src/views/series/index.ejs
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    
+    <main class="container">
+        <h1>Cricket Series</h1>
+        
+        <div class="series-filters">
+            <button class="btn active" data-filter="all">All Series</button>
+            <button class="btn" data-filter="upcoming">Upcoming</button>
+            <button class="btn" data-filter="ongoing">Ongoing</button>
+            <button class="btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="series-grid">
+            <% series.forEach(function(series) { %>
+                <div class="series-card" data-status="<%= series.status.toLowerCase() %>">
+                    <h2><a href="/series/<%= series._id %>"><%= series.name %></a></h2>
+                    <p class="series-date">
+                        <%= new Date(series.startDate).toLocaleDateString() %> - 
+                        <%= new Date(series.endDate).toLocaleDateString() %>
+                    </p>
+                    <p class="series-format"><%= series.format %></p>
+                    <div class="series-teams">
+                        <% series.teams.forEach(function(team) { %>
+                            <span class="team-name"><%= team.name %></span>
+                        <% }); %>
+                    </div>
+                    <span class="series-status <%= series.status.toLowerCase() %>">
+                        <%= series.status %>
+                    </span>
+                </div>
+            <% }); %>
+        </div>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

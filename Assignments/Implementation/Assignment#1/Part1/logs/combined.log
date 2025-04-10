@@ -1,0 +1,65 @@
+{
+  message: 'Starting database population',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:11.420Z'
+}
+{
+  message: 'Successfully connected to MongoDB.',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:11.475Z'
+}
+{
+  message: 'Cleared existing university data',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:11.532Z'
+}
+{
+  message: 'Fetching universities for Pakistan',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:11.534Z'
+}
+{
+  message: 'Populated 136 universities for Pakistan',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:12.743Z'
+}
+{
+  message: 'Fetching universities for India',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:12.817Z'
+}
+{
+  message: 'Populated 462 universities for India',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:13.407Z'
+}
+{
+  message: 'Fetching universities for China',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:13.539Z'
+}
+{
+  message: 'Populated 397 universities for China',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:13.870Z'
+}
+{
+  message: 'Fetching universities for USA',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:13.965Z'
+}
+{
+  message: 'Populated 0 universities for USA',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:14.189Z'
+}
+{
+  message: 'Fetching universities for UK',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:14.190Z'
+}
+{
+  message: 'Populated 0 universities for UK',
+  level: 'info',
+  timestamp: '2024-12-20T08:05:14.413Z'
+}

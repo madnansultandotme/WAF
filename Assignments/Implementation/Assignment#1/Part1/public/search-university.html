@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search University Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 300px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search University Details</h1>
+    <div class="form-group">
+        <input type="text" id="universityInput" placeholder="Enter university name">
+        <button onclick="searchUniversity()">Search</button>
+    </div>
+    <div id="results"></div>
+
+    <script>
+        async function searchUniversity() {
+            const university = encodeURIComponent(document.getElementById('universityInput').value);
+            const resultsDiv = document.getElementById('results');
+            
+            if (!university) {
+                resultsDiv.innerHTML = '<p class="error">Please enter a university name</p>';
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/university/${university}`);
+                const data = await response.json();
+                
+                if (response.ok) {
+                    if (data.error) {
+                        resultsDiv.innerHTML = `<p class="error">${data.error}</p>`;
+                    } else {
+                        resultsDiv.innerHTML = `
+                            <h2>${data.name}</h2>
+                            <h3>Web Pages:</h3>
+                            <ul>
+                                ${data.webPages.map(url => `<li><a href="${url}" target="_blank">${url}</a></li>`).join('')}
+                            </ul>
+                        `;
+                    }
+                } else {
+                    resultsDiv.innerHTML = '<p class="error">University not found</p>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                resultsDiv.innerHTML = '<p class="error">Error searching for university</p>';
+            }
+        }
+    </script>
+</body>
+</html>

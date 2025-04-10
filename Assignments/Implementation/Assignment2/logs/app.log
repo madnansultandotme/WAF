@@ -1,0 +1,110 @@
+[2025-01-17T11:34:07.797Z] INFO: Server running on port 3000
+[2025-01-17T11:34:07.853Z] INFO: Database connection established
+[2025-01-17T11:34:24.634Z] ERROR: 500 - Server Error - C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\home.ejs:8
+    6| </head>
+    7| <body>
+ >> 8|     <%- include('partials/nav') %>
+    9|     
+    10|     <main class="container">
+    11|         <section class="hero-section">
+
+C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\partials\nav.ejs:10
+    8|         </div>
+    9|         <ul class="nav-links">
+ >> 10|             <li><a href="/" class="<%= path === '/' ? 'active' : '' %>">Home</a></li>
+    11|             <li><a href="/scoreboard" class="<%= path === '/scoreboard' ? 'active' : '' %>">Scoreboard</a></li>
+    12|             <li><a href="/series" class="<%= path === '/series' ? 'active' : '' %>">Series</a></li>
+    13|             <li><a href="/teams" class="<%= path === '/teams' ? 'active' : '' %>">Teams</a></li>
+
+path is not defined
+[2025-01-17T11:37:01.637Z] ERROR: 500 - Server Error - C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\home.ejs:8
+    6| </head>
+    7| <body>
+ >> 8|     <%- include('partials/nav') %>
+    9|     
+    10|     <main class="container">
+    11|         <section class="hero-section">
+
+C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\partials\nav.ejs:10
+    8|         </div>
+    9|         <ul class="nav-links">
+ >> 10|             <li><a href="/" class="<%= path === '/' ? 'active' : '' %>">Home</a></li>
+    11|             <li><a href="/scoreboard" class="<%= path === '/scoreboard' ? 'active' : '' %>">Scoreboard</a></li>
+    12|             <li><a href="/series" class="<%= path === '/series' ? 'active' : '' %>">Series</a></li>
+    13|             <li><a href="/teams" class="<%= path === '/teams' ? 'active' : '' %>">Teams</a></li>
+
+path is not defined
+[2025-01-17T11:37:04.397Z] ERROR: 500 - Server Error - C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\home.ejs:8
+    6| </head>
+    7| <body>
+ >> 8|     <%- include('partials/nav') %>
+    9|     
+    10|     <main class="container">
+    11|         <section class="hero-section">
+
+C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\partials\nav.ejs:10
+    8|         </div>
+    9|         <ul class="nav-links">
+ >> 10|             <li><a href="/" class="<%= path === '/' ? 'active' : '' %>">Home</a></li>
+    11|             <li><a href="/scoreboard" class="<%= path === '/scoreboard' ? 'active' : '' %>">Scoreboard</a></li>
+    12|             <li><a href="/series" class="<%= path === '/series' ? 'active' : '' %>">Series</a></li>
+    13|             <li><a href="/teams" class="<%= path === '/teams' ? 'active' : '' %>">Teams</a></li>
+
+path is not defined
+[2025-01-17T11:38:47.849Z] INFO: Server running on port 3000
+[2025-01-17T11:38:47.893Z] INFO: Database connection established
+[2025-01-17T11:38:55.839Z] ERROR: 500 - Server Error - C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\home.ejs:23
+    21|             </div>
+    22|             <div class="matches-grid">
+ >> 23|                 <% if (liveMatches.length > 0) { %>
+    24|                     <% liveMatches.forEach(function(match) { %>
+    25|                         <div class="match-card live">
+    26|                             <%- include('partials/match-card', { match: match }) %>
+
+liveMatches is not defined
+[2025-01-17T11:38:57.611Z] ERROR: 500 - Server Error - C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\home.ejs:23
+    21|             </div>
+    22|             <div class="matches-grid">
+ >> 23|                 <% if (liveMatches.length > 0) { %>
+    24|                     <% liveMatches.forEach(function(match) { %>
+    25|                         <div class="match-card live">
+    26|                             <%- include('partials/match-card', { match: match }) %>
+
+liveMatches is not defined
+[2025-01-17T11:43:18.901Z] INFO: Server running on port 3000
+[2025-01-17T11:43:18.950Z] INFO: Database connection established
+[2025-01-17T11:43:25.740Z] ERROR: 500 - Server Error - C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\home.ejs:23
+    21|             </div>
+    22|             <div class="matches-grid">
+ >> 23|                 <% if (liveMatches.length > 0) { %>
+    24|                     <% liveMatches.forEach(function(match) { %>
+    25|                         <div class="match-card live">
+    26|                             <%- include('partials/match-card', { match: match }) %>
+
+liveMatches is not defined
+[2025-01-17T11:47:15.966Z] INFO: Server running on port 3000
+[2025-01-17T11:47:16.010Z] INFO: Database connection established
+[2025-01-17T11:47:19.858Z] ERROR: 500 - Server Error - C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\home.ejs:23
+    21|             </div>
+    22|             <div class="matches-grid">
+ >> 23|                 <% if (liveMatches.length > 0) { %>
+    24|                     <% liveMatches.forEach(function(match) { %>
+    25|                         <div class="match-card live">
+    26|                             <%- include('partials/match-card', { match: match }) %>
+
+liveMatches is not defined
+[2025-01-17T11:48:30.753Z] INFO: Server running on port 3000
+[2025-01-17T11:48:30.808Z] INFO: Database connection established
+[2025-01-17T11:49:52.365Z] ERROR: 500 - Server Error - C:\Users\adnan\OneDrive\Desktop\7th Semester\WAF\Assignments\Implementation\Assignment2\src\views\home.ejs:23
+    21|             </div>
+    22|             <div class="matches-grid">
+ >> 23|                 <% if (liveMatches.length > 0) { %>
+    24|                     <% liveMatches.forEach(function(match) { %>
+    25|                         <div class="match-card live">
+    26|                             <%- include('partials/match-card', { match: match }) %>
+
+liveMatches is not defined
+[2025-01-17T11:51:42.826Z] INFO: Server running on port 3000
+[2025-01-17T11:51:42.879Z] INFO: Database connection established
+[2025-01-17T11:56:28.500Z] INFO: Server running on port 3000
+[2025-01-17T11:56:28.550Z] INFO: Database connection established

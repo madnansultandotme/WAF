@@ -1,0 +1,25 @@
+// src/views/partials/nav.ejs
+<header class="main-header">
+    <nav class="container">
+        <div class="logo">
+            <a href="/">
+                <img src="/images/logo.png" alt="Cricket Dashboard">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/" class="<%= path === '/' ? 'active' : '' %>">Home</a></li>
+            <li><a href="/scoreboard" class="<%= path === '/scoreboard' ? 'active' : '' %>">Scoreboard</a></li>
+            <li><a href="/series" class="<%= path === '/series' ? 'active' : '' %>">Series</a></li>
+            <li><a href="/teams" class="<%= path === '/teams' ? 'active' : '' %>">Teams</a></li>
+            <li><a href="/players" class="<%= path === '/players' ? 'active' : '' %>">Players</a></li>
+        </ul>
+        <div class="search-container">
+            <form action="/players/search" method="GET">
+                <input type="text" name="query" placeholder="Search players...">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,62 @@
+<!-- public/country-universities.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Universities by Country</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 300px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Universities by Country</h1>
+    <div class="form-group">
+        <input type="text" id="countryInput" placeholder="Enter country name">
+        <button onclick="searchCountry()">Search</button>
+    </div>
+    <div id="results"></div>
+
+    <script>
+        async function searchCountry() {
+            const country = document.getElementById('countryInput').value;
+            try {
+                const response = await fetch(`/api/universities/${country}`);
+                const data = await response.json();
+                const resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = `
+                    <h2>Results for ${country}</h2>
+                    <p>Total Universities: ${data.count}</p>
+                    <h3>Universities:</h3>
+                    <ul>
+                        ${data.universities.map(uni => `<li>${uni}</li>`).join('')}
+                    </ul>
+                `;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>
+

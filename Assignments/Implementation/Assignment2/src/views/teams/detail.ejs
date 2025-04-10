@@ -1,0 +1,104 @@
+// src/views/teams/detail.ejs
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    
+    <main class="container">
+        <div class="team-header">
+            <div class="team-info">
+                <img src="/images/teams/<%= team.name.toLowerCase() %>.png" alt="<%= team.name %>" class="team-logo">
+                <h1><%= team.name %></h1>
+                <div class="team-rankings">
+                    <div class="ranking-item">
+                        <span class="format">Test</span>
+                        <span class="rank">#<%= team.ranking.test %></span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="format">ODI</span>
+                        <span class="rank">#<%= team.ranking.odi %></span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="format">T20</span>
+                        <span class="rank">#<%= team.ranking.t20 %></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-stats">
+                <h2>Team Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Matches</span>
+                        <span class="stat-value"><%= team.statistics.matches.total %></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Won</span>
+                        <span class="stat-value"><%= team.statistics.matches.won %></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Lost</span>
+                        <span class="stat-value"><%= team.statistics.matches.lost %></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Drawn</span>
+                        <span class="stat-value"><%= team.statistics.matches.drawn %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="team-squad">
+            <h2>Squad</h2>
+            <div class="players-grid">
+                <% team.players.forEach(function(player) { %>
+                    <div class="player-card">
+                        <img src="/images/players/<%= player._id %>.png" alt="<%= player.name %>" class="player-image">
+                        <h3><a href="/players/<%= player._id %>"><%= player.name %></a></h3>
+                        <p class="player-role"><%= player.role %></p>
+                        <% if (player._id.toString() === team.captain._id.toString()) { %>
+                            <span class="captain-badge">Captain</span>
+                        <% } %>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+
+        <section class="recent-matches">
+            <h2>Recent Matches</h2>
+            <div class="matches-list">
+                <% team.recentMatches.forEach(function(match) { %>
+                    <div class="match-card">
+                        <div class="match-date">
+                            <%= new Date(match.date).toLocaleDateString() %>
+                        </div>
+                        <div class="match-teams">
+                            <div class="team">
+                                <span class="team-name"><%= match.teams.team1.name %></span>
+                                <span class="team-score">
+                                    <%= match.score.team1.runs %>/<%= match.score.team1.wickets %>
+                                </span>
+                            </div>
+                            <div class="vs">VS</div>
+                            <div class="team">
+                                <span class="team-name"><%= match.teams.team2.name %></span>
+                                <span class="team-score">
+                                    <%= match.score.team2.runs %>/<%= match.score.team2.wickets %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="match-result <%= match.result.toLowerCase() %>">
+                            <%= match.result %>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>
